@@ -27,6 +27,6 @@ interrupt:
 ;data
     MSG db 'Hello World! From Kishor',0x0A,0 ;null terminated string
 
-TIMES 510 - ($ - $$) db 0
-DW 0xAA55
+TIMES 510 - ($ - $$) db 0         ;fill remaining with 0 to make it exactly 512 bytes
+DW 0xAA55         ;boot signature
 
